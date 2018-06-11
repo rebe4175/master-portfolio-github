@@ -1,0 +1,1499 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900');
+
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400');
+
+
+/* --------- GENERAL ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    text-align: center;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 120px;
+    font-size: 30px;
+}
+
+
+
+h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+    letter-spacing: 4px;
+    font-weight: 300;
+    color: dimgray;
+
+}
+
+h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+
+h4 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    line-height: 0;
+    font-size: 12px;
+}
+
+
+p {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 15px;
+
+}
+
+
+.hr {
+    margin: 80px 200px auto;
+}
+
+
+/* ---- NAV ----- */
+
+.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* ---- covers content ----- */
+    background-color: white;
+    opacity: 0.9;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 3;
+}
+
+
+.topnav a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 12px 16px;
+    /* ---- covers content ----- */
+    text-decoration: none;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: grey;
+    opacity: inherit;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+
+
+
+/* --------
+
+ul.navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    opacity: 0.9;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 3;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: grey;
+    text-align: center;
+    padding: 14px 40px;
+    text-decoration: none;
+    opacity: inherit;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+
+
+---------- */
+
+li a:hover:not(.active) {
+    background-color: lavenderblush;
+}
+
+
+.active {
+    background-color: lightgray;
+}
+
+
+
+
+/* --------- HERO SECTION ---------- */
+
+section#hero {
+    background-image: url(img/large/background3.jpg);
+    width: 100%;
+    text-align: center;
+    height: 750px;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+
+}
+
+
+
+section#hero img {
+    margin-top: 250px;
+}
+
+#see_more {
+    position: absolute;
+    margin: 0 auto;
+    margin-top: 685px;
+    background-color: inherit;
+    color: white;
+    left: 50%;
+    margin-left: -34px;
+    transform: 0.3;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+}
+
+#see_more:hover {
+    background-color: white;
+    color: black;
+    border: black;
+    transform: scale(1.1);
+
+}
+
+@keyframes jump {
+    0% {
+        transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    }
+
+    100% {
+        transform: translate3d(0, 50%, 0) scale3d(1, 0.9, 1);
+    }
+}
+
+
+/* --------- ARROW ---------- */
+
+.jump {
+    transform-origin: 50% 50%;
+    position: absolute;
+    padding: 11px;
+    animation: jump .5s linear alternate infinite;
+    bottom: 20px;
+    left: 50%;
+}
+
+
+
+
+
+
+/* --------- PORTFOLIO SECTION ---------- */
+
+section#portfolio {
+    text-align: center;
+    padding: 1px 0;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 100px 1fr 1fr 1fr;
+    height: auto;
+}
+
+#portfolio hr {
+    grid-row: 1;
+}
+
+#portfolio h2 {
+    grid-row: 2;
+}
+
+.video_ux,
+.animation_website,
+.website_others {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+}
+
+/*---- PROJECTS IN GRID ----*/
+
+.port_city {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.port_bike {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.port_venture {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+
+
+/*---- PROJECTS IN GRID END ----*/
+
+.port_project {
+    -webkit-transition: all 0.9s;
+    -moz-transition: all 0.9s;
+    -ms-transition: all 0.9s;
+    transition: all 0.9s;
+    position: relative;
+}
+
+.port_project::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    transition: .5s;
+}
+
+.port_project:hover::after {
+    background: rgba(0,0,0,0.1);
+}
+
+.port_project span {
+    z-index: 1;
+    font-weight: 300;
+}
+
+
+
+.port_headline {
+    text-decoration: none!important;
+}
+
+.city-of-loneliness {
+    display: grid;
+    background-image: url(img/video/city/1.png);
+    background-size: cover;
+    padding: 60px;
+    margin: 20px;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    color: white;
+    min-height: 80px;
+
+
+}
+
+.city-of-loneliness:hover {
+    background-image: url(img/video/city/cover2.png);
+
+}
+
+
+
+.bicycle-program {
+    display: grid;
+    background-image: url(img/video/bikes/Screen%20Shot%202018-06-06%20at%2013.19.22.png);
+    background-size: cover;
+    padding: 60px;
+    margin: 20px;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    color: white;
+    min-height: 80px;
+}
+
+.bicycle-program:hover {
+    background-image: url(img/video/bikes/cover2.1.png);
+
+
+}
+
+
+
+.venture {
+    display: grid;
+    background-image: url(img/ux/FullSizeRender%2059.jpg);
+    background-size: cover;
+    padding: 60px;
+    margin: 20px;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    color: white;
+    min-height: 80px;
+}
+
+.venture:hover {
+    background-image: url(img/ux/FullSizeRender%2061.jpg);
+
+}
+
+
+
+.cuppy-donkey {
+    display: grid;
+    background-image: url(img/animation/coffeedonut/cover1.jpg);
+    background-size: cover;
+    padding: 60px;
+    margin: 20px;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-weight: 100;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    min-height: 80px;
+
+}
+
+.cuppy-donkey:hover {
+    background-image: url(img/animation/coffeedonut/cover2.jpg);
+}
+
+
+
+.bauhaus-web {
+    display: grid;
+    background-image: url(img/web/bauhaus/cover1.jpg);
+    background-size: cover;
+    padding: 60px;
+    margin: 20px;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    color: white;
+    min-height: 80px;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    min-height: 80px;
+
+}
+
+.bauhaus-web:hover {
+    background-image: url(img/web/bauhaus/cover%202.JPG);
+}
+
+
+
+
+.wild-harry {
+    display: grid;
+    background-image: url(img/animation/harry/cover1.jpg);
+    background-size: cover;
+    padding: 60px;
+    margin: 20px;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    color: white;
+    min-height: 80px;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    min-height: 80px;
+
+}
+
+.wild-harry:hover {
+    background-image: url(img/animation/harry/cover2.jpg);
+}
+
+
+
+
+.sth {
+    display: grid;
+    background-image: url(img/others/two_animations/cover1.jpg);
+    background-size: cover;
+    padding: 60px;
+    margin: 20px;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    color: white;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    min-height: 80px;
+}
+
+.sth:hover {
+    background-image: url(img/others/two_animations/cover2.jpg);
+}
+
+.kilkee-website {
+    display: grid;
+    background-image: url(img/web/kilkee/cover1.jpg);
+    background-size: cover;
+    padding: 60px;
+    margin: 20px;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    color: white;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    min-height: 80px;
+}
+
+.kilkee-website:hover {
+    background-image: url(img/web/kilkee/cover2.jpg);
+
+}
+
+
+.moonbar {
+    display: grid;
+    background-image: url(img/others/moonbar/cover.jpg);
+    background-size: cover;
+    padding: 60px;
+    margin: 20px;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    color: white;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    min-height: 80px;
+}
+
+
+.moonbar:hover {
+    background-image: url(img/others/moonbar/cover3.jpg);
+
+}
+
+
+
+
+/* --------- ABOUT ME SECTION ---------- */
+
+section#about_me {
+    text-align: center;
+    margin: 100px auto 300px;
+    max-width: 500px;
+
+}
+
+#see_cv,
+#see_doc {
+    display: block;
+    margin: 25px auto;
+    background-color: lightgray;
+    font-size: 13px;
+    margin-top: 30px;
+    padding: 5px;
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    text-decoration-line: none;
+    width: 200px;
+    color: darkslategray;
+}
+
+#see_cv:hover {
+    background-color: darkslategrey;
+    color: white;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#see_doc:hover {
+    background-color: darkslategrey;
+    color: white;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+/* --------- CV PAGE ---------- */
+
+.cv_page {
+    position: absolute;
+    margin-top: 50px;
+    text-align: center;
+    pointer-events: stroke;
+}
+
+/* Animation */
+
+/* --------- FOOTER SECTION ---------- */
+
+section#footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". city-of-loneliness city-of-loneliness city-of-loneliness ." ". bicycle-program bicycle-program bicycle-program ." ". venture venture venture .";
+    background-color: dimgrey;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+
+}
+
+
+.links_footer {
+    display: grid;
+    margin: auto;
+    grid-row-gap: 2px
+}
+
+#fb,
+#ig,
+#li,
+#tb {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    margin: 5px;
+
+}
+
+
+
+.skills_footer {
+    display: grid;
+    margin: 3px auto;
+}
+
+
+/* ---------  PORTFOLIO CATEGORIES  ---------- */
+
+.description-container,
+.picture-container {
+    text-align: center;
+    margin: 100px auto 100px;
+    max-width: 500px;
+}
+
+
+
+
+
+
+/* --------- CITY PAGE ---------- */
+
+.city_video1,
+.city_video1 {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+
+}
+
+.city_makingof {
+    margin: 60px 350px auto;
+}
+
+.jump2 {
+    transform-origin: 50% 50%;
+    position: relative;
+    left: 50%;
+
+    animation: jump .5s linear alternate infinite;
+    margin-bottom: 5px
+}
+
+.see_makingof {
+    margin-top: 100px;
+    font-size: 50px;
+    letter-spacing: 3px;
+}
+
+
+
+
+
+/* --------- BIKES PAGE ---------- */
+
+.kommune {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.port_video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+
+.port_video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.bikes_content {
+    margin: 0 auto;
+    align-items: center;
+    width: 100%;
+}
+
+#back_bikes {
+    font-family: 'Lato', serif;
+    background-color: gray;
+    position: absolute;
+    margin: 0 auto;
+    padding: 15px;
+    color: white;
+    font-size: 13px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    top: 60px;
+    right: 10px;
+    cursor: pointer;
+
+
+}
+
+#bike_gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". gallery1 gallery1 gallery1 ." ". gallery2 gallery2 gallery2 ." ". gallery3 gallery3 gallery3 .";
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    width: 100%;
+    background-color: dimgrey;
+}
+
+
+
+.gallery_bike1 {
+    display: grid;
+    padding: 60px;
+    background-size: contain;
+    padding: 60px;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    color: white;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    min-height: 80px;
+}
+
+
+.gallery_bike2 {
+    display: grid;
+    padding: 60px;
+    background-size: cover;
+    padding: 60px;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    color: white;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    min-height: 80px;
+}
+
+
+.gallery_bike3 {
+    display: grid;
+    padding: 60px;
+    background-size: cover;
+    padding: 60px;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    color: white;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    min-height: 80px;
+}
+
+.gallery_bike1:hover,
+.gallery_bike2:hover,
+.gallery_bike3:hover {
+    opacity: 0.6;
+}
+
+
+/* --------- VENTURE PAGE ---------- */
+
+.venture_content {
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+#open_app {
+    font-family: 'Lato', serif;
+    background-color: gray;
+    padding: 15px;
+    color: white;
+    font-size: 13px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-decoration: none;
+    position: relative;
+    top: 50px;
+}
+
+.venture_img {
+    margin-top: 50px;
+    width: 100%;
+}
+
+
+#open_app:hover {
+    background-color: darkslategrey;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* --------- CUPPY DONKEY PAGE ---------- */
+
+.cuppy_donkey_story {
+    margin: )px auto;
+    padding: 0 70px;
+    text-align: center;
+}
+
+.cuppy_donkey_pic,
+.harry_pic {
+    max-width: 500px;
+    width: 100%;
+}
+
+#open_animation {
+    font-family: 'Lato', serif;
+    background-color: gray;
+    margin-top: 100px;
+    padding: 15px;
+    color: white;
+    font-size: 13px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-decoration: none;
+    position: relative;
+    top: 50px;
+
+}
+
+#open_animation:hover {
+    background-color: darkslategrey;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* --------- BAUHAUS PAGE ---------- */
+
+.bauhaus_page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    margin: 0 auto;
+    width: 100%;
+
+}
+
+.bauhaus_heading {
+    margin: 0;
+}
+
+.description-container {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.picture-container {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.quote,
+.bauhaus_description1,
+.bauhaus_description2 {
+    margin: 40px;
+}
+
+
+.bauhaus_description3 {
+    margin-top: 100px;
+
+}
+
+#open_bauhaus {
+    font-family: 'Lato', serif;
+    background-color: gray;
+    margin: 0 auto;
+    padding: 15px;
+    color: white;
+    font-size: 13px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-decoration: none;
+    position: relative;
+
+}
+
+#open_harry {
+    font-family: 'Lato', serif;
+    background-color: gray;
+    margin: 0 auto;
+    padding: 15px;
+    color: white;
+    font-size: 13px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-decoration: none;
+    position: relative;
+}
+
+#open_bauhaus:hover {
+    background-color: darkslategrey;
+    color: white;
+    transform: scale(1.1);
+}
+
+#open_prototype1,
+#open_prototype2 {
+    display: grid;
+    font-family: 'Lato', serif;
+    background-color: gray;
+    margin: 5px auto;
+    padding: 10px;
+    color: white;
+    font-size: 13px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-decoration: none;
+    position: relative;
+    top: 10px;
+    align-items: center;
+}
+
+#open_prototype1:hover {
+    background-color: darkslategrey;
+    color: white;
+    transform: scale(1.1);
+}
+
+#open_prototype2:hover {
+    background-color: darkslategrey;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* --------- WILD HARRY PAGE ---------- */
+
+.harry_description1,
+.harry_description2 {
+    margin: 40px auto;
+}
+
+/* --------- SHT PAGE ---------- */
+
+/* --------- KILKEE PAGE ---------- */
+
+/* --------- MOONBAR PAGE ---------- */
+
+.kea_heading {
+    font-size: 17px;
+    padding: 5px
+}
+
+
+.moonbar_description {
+    margin: 50px auto;
+}
+
+#moonbar_gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: ". gallery1 gallery1 gallery1 ." ". gallery2 gallery2 gallery2 ." ". gallery3 gallery3 gallery3 .";
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    margin: 0 auto;
+    width: 100%;
+    background-color: dimgrey;
+
+}
+
+.gallery1,
+.gallery4,
+.gallery7 {
+    display: grid;
+    padding: 60px;
+    background-size: cover;
+    padding: 60px;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    color: white;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    min-height: 80px;
+}
+
+
+
+
+.gallery2,
+.gallery5,
+.gallery8 {
+    display: grid;
+    padding: 60px;
+    background-size: cover;
+    padding: 60px;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+
+    font-weight: 100;
+    color: white;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    min-height: 80px;
+}
+
+
+
+
+
+.gallery3,
+.gallery6,
+.gallery9 {
+    display: grid;
+    background-size: cover;
+    padding: 60px;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+
+    font-weight: 100;
+    color: white;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    min-height: 80px;
+}
+
+
+.gallery1:hover,
+.gallery2:hover,
+.gallery3:hover,
+.gallery4:hover,
+.gallery5:hover,
+.gallery6:hover,
+.gallery7:hover,
+.gallery8:hover,
+.gallery9:hover {
+    opacity: 0.6;
+}
+
+.jump_moonbar {
+    display: grid;
+    align-items: center;
+    transform-origin: 50% 50%;
+    margin: 0 auto;
+    padding: 10px;
+    animation: jump .5s linear alternate infinite;
+    grid-column-start: 2;
+    grid-column-end: 2;
+
+
+}
+
+.moonbar_footer {
+    display: grid;
+    text-align: center;
+    align-items: center;
+    margin-top: 50px;
+    margin: 0 auto;
+    padding: 10px;
+    font-family: 'Lato' sans-serif;
+    font-weight: 100;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.moonbar_links {
+    display: grid;
+    text-align: center;
+    margin-top: 50px;
+    margin: 0 auto;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    grid-column-start: 2;
+    grid-column-end: 2;
+
+}
+
+/* --------- GO BACK BUTTON ---------- */
+
+#back {
+    font-family: 'Lato', serif;
+    background-color: gray;
+    position: fixed;
+    margin: 0 auto;
+    padding: 15px;
+    color: white;
+    font-size: 13px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    top: 60px;
+    right: 10px;
+}
+
+
+#back:hover {
+    background-color: darkslategrey;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* --------- GALLERY ---------- */
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+.gallery_heading {
+    margin-top: 50px;
+}
+
+/* --------- LINK BUTTON ---------- */
+
+#city_link {
+    position: absolute;
+    margin-top: 550px;
+    margin-left: 350px;
+}
+
+.icon-wrapper a {
+    color: white;
+    margin: 10px;
+    font-size: 25px;
+}
+
+/*---- MEDIA QUERIES ----*/
+
+@media screen and (max-width:1030px) {
+    #moonbar_gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gallery1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .gallery2 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .gallery3 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .gallery4 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .gallery5 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .gallery6 {
+        grid-column: 2;
+        grid-row: 3;
+    }
+    .gallery7 {
+        grid-column: 1;
+        grid-row: 4;
+    }
+    .gallery8 {
+        grid-column: 2;
+        grid-row: 4;
+    }
+    .gallery9 {
+        grid-column: 1;
+        grid-row: 5;
+    }
+    .moonbar_links {
+        grid-column: 2;
+        grid-row: 5;
+    }
+
+
+    /*---- BIKES IN GRID ----*/
+    .bike_gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gallery_bike1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .gallery_bike2 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+
+    .gallery_bike3 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+}
+
+
+@media screen and (max-width:980px) {
+    /*---- BAUHAUS IN GRID ----*/
+    .bauhaus_page {
+        grid-template-columns: 1fr;
+    }
+
+
+    .description-container {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .picture-container {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    hr {
+        margin: 10px;
+    }
+
+
+}
+
+@media screen and (max-width:600px) {
+
+    .video_ux,
+    .animation_website,
+    .website_others {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+    /*---- PROJECTS IN GRID ----*/
+    .port_city,
+    .post_cd,
+    .port_sth {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .port_bike,
+    .port_bauhaus,
+    .port_kilkee {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .port_venture,
+    .port_harry,
+    .port_moonbar {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+
+
+    /*---- PROJECTS IN GRID END ----*/
+    /*---- MOONBAR IN GRID ----*/
+    .gallery1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .gallery2 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+
+    .gallery3 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+
+    .gallery4 {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+
+    .gallery5 {
+        grid-column: 1;
+        grid-row: 5;
+    }
+
+
+    .gallery6 {
+        grid-column: 1;
+        grid-row: 6;
+    }
+
+
+    .gallery7 {
+        grid-column: 1;
+        grid-row: 7;
+    }
+    .gallery8 {
+        grid-column: 1;
+        grid-row: 8;
+    }
+
+    .gallery9 {
+        grid-column: 1;
+        grid-row: 9;
+    }
+
+
+    .jump_moonbar {
+        grid-column: 1;
+        grid-row: 10;
+    }
+
+    .moonbar_footer,
+        {
+        grid-column: 1;
+        grid-row: 11;
+    }
+
+    .moonbar_links {
+        grid-column: 1;
+        grid-row: 12;
+    }
+
+
+
+
+
+    /*---- BIKES IN GRID ----*/
+    .bike_gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .gallery_bike1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .gallery_bike2 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+
+    .gallery_bike3 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+}
+
+
+
+
+
+
+/* --------- NAVIGATION  ---------- */
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: fixed;
+    }
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+
+
+/* --------- ANIMATION ---------- */
+
+/* --------- GENERAL ---------- */
+
+/*
+* {
+    margin: auto;
+    padding: 0;
+    object-position: center;
+}
+
+body{
+    background-image: url(img/large/background1.jpg);
+    position: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1700x;
+
+}
+
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: ". container_drop ." ". logo ." ". footer ." ". arrow ."
+}
+
+/* --------- MENU  ---------- */
+
+/*
+.container_drop {
+    text-align: left;
+    margin: 0;
+    right: 0;
+   display: block;
+    padding: 8px 20px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.69);
+    
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 2px;
+    background-color: lightslategray;
+    margin: 6px 0;
+    transition: 0.4s;
+    margin-left: 340px;
+    position: inherit;
+}
+
+.icon1 {
+    width: 30px
+}
+}
+
+
+
+    /* --------- LOGO ---------- 
+    .logo { 
+        grid-area: logo;
+        align-self: center;
+        margin-top: 38%;
+        margin-left: 54%;
+        position: absolute;
+        font-size: 195%;
+        font-family: hind;
+        letter-spacing: 4px;
+    }
+
+
+
+
+    /* --------- OTHERS ----------
+    .footer {
+        grid-area: footer;
+        align-self: center;
+    }
+
+    .arrow {
+        grid-area: arrow;
+        align-self: center;
+    }
+*/
