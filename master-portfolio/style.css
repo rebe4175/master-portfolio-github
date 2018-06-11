@@ -22,6 +22,7 @@ h1 {
     text-align: center;
     margin-top: 120px;
     font-size: 30px;
+    margin-bottom: 30px;
 }
 
 
@@ -29,7 +30,7 @@ h1 {
 h2 {
     font-family: 'Lato', sans-serif;
     font-size: 24px;
-    padding: 20px;
+    padding: 0px;
     text-align: center;
     margin: 0 auto;
     letter-spacing: 4px;
@@ -177,6 +178,9 @@ section#hero {
 
 }
 
+#logo{
+    max-width: 170px;
+}
 
 
 section#hero img {
@@ -773,8 +777,6 @@ section#footer {
 
 
 
-
-
 #open_app {
     font-family: 'Lato', serif;
     background-color: gray;
@@ -792,6 +794,7 @@ section#footer {
 .venture_img {
     margin-top: 50px;
     width: 100%;
+    max-width: 700px
 }
 
 
@@ -810,7 +813,7 @@ section#footer {
 }
 
 .cuppy_donkey_pic,
-.harry_pic {
+.harry_pic, .kilkee_pic {
     max-width: 500px;
     width: 100%;
 }
@@ -1135,6 +1138,9 @@ div.desc {
 
 .gallery_heading {
     margin-top: 50px;
+    font-size: 40px;
+    text-align: center;
+    padding: 30px
 }
 
 /* --------- LINK BUTTON ---------- */
