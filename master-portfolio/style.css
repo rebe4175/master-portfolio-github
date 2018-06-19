@@ -154,8 +154,7 @@ section#hero img {
 
 #see_more {
     position: absolute;
-    margin: 0 auto;
-    margin-top: 685px;
+    bottom:50px;
     background-color: inherit;
     color: white;
     left: 50%;
@@ -193,7 +192,7 @@ section#hero img {
     animation: jump .5s linear alternate infinite;
     bottom: 20px;
     left: 50%;
-    width: 15px
+    width: 15px;
 }
 
 
@@ -1367,11 +1366,7 @@ div.desc {
     .topnav a.icon {
         float: right;
         display: block;
-
     }
-}
-
-@media screen and (max-width: 600px) {
     .topnav.responsive {
         position: fixed;
     }
